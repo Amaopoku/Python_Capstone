@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Ticket</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background: radial-gradient(white, pink);
+            background-repeat: no-repeat;
+            background-cover: cover;
+        }
+        .ticket-container {
+            max-width: 600px;
+            margin: 0 auto; /* Center horizontally */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px; /* Increase heading font size */
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .ticket-label {
+            font-size: 22px; /* Adjust font size for labels */
+        }
+        .ticket-details {
+            font-size: 18px; /* Font size for generated details */
+            line-height: 1.6; /* Adjust line height for readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mt-5">
+            <h1>Reservation Ticket</h1>
+        </div>
+        <div class="ticket-container">
+            <p><span class="ticket-label">Passenger Name:</span> <span class="ticket-details">{{ ticket.passenger_name }}</span></p>
+            <p><span class="ticket-label">Flight Number:</span> <span class="ticket-details">{{ ticket.flight_number }}</span></p>
+            <p><span class="ticket-label">Departure:</span> <span class="ticket-details">{{ ticket.departure_city }} at {{ ticket.departure_time }}</span></p>
+            <p><span class="ticket-label">Arrival:</span> <span class="ticket-details">{{ ticket.arrival_city }} at {{ ticket.arrival_time }}</span></p>
+            <p><span class="ticket-label">Seat:</span> <span class="ticket-details">{{ ticket.seat_assignment }}</span></p>
+        </div>
+    </div>
+</body>
+</html>
